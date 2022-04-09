@@ -1,0 +1,12 @@
+html, body{
+    margin: 0;
+    padding:0;
+}
+body{
+    min-height: 100%;
+    background: #100f15;
+}
+a{
+    color: #ffffff;
+    display: block;
+}

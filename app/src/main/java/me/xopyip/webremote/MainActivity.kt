@@ -5,6 +5,8 @@ import android.util.Log
 import android.view.KeyEvent.*
 import androidx.fragment.app.FragmentActivity
 import io.javalin.Javalin
+import io.javalin.http.ContentType
+import io.javalin.plugin.json.jsonMapper
 import java.net.Socket
 import java.security.interfaces.RSAPublicKey
 import java.util.concurrent.ExecutorService
@@ -70,9 +72,22 @@ class MainActivity : FragmentActivity() {
                     }
                 }
             }
-
+            var localId = 0
             app.get("/") { it.redirect("/index.html") }
             registerStaticFiles(app, "")
+            app.ws("/ws/") { ws ->
+                ws.onConnect { ctx -> println("Connected") }
+                ws.onMessage { ctx ->
+                    ctx.message().let {
+                        when {
+                            it.startsWith("click,") -> sock.exec(
+                                "input keyevent " + it.substring(6).toInt(), localId++
+                            )
+                            else -> Log.i("WebRemote", "unknown command")
+                        }
+                    }
+                }
+            }
         }
 
 
@@ -92,6 +107,8 @@ class MainActivity : FragmentActivity() {
                     when {
                         it.endsWith(".html") -> ctx.html(
                             assets.open("public$path/$it").bufferedReader().use { it.readText() })
+                        it.endsWith(".css") -> ctx.contentType(ContentType.TEXT_CSS)
+                            .result(assets.open("public$path/$it"))
                         else -> ctx.result(assets.open("public$path/$it"))
                     }
                 }

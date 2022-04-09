@@ -5,31 +5,34 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="/app.css" rel="stylesheet">
     <title>WebRemote</title>
 </head>
 <body>
-<h1>WebRemote</h1>
-<a href="/?code=volup">volup</a>
-<a href="/?code=voldown">voldown</a>
-<a href="/?code=mute">mute</a>
-<a href="/?code=chup">chup</a>
-<a href="/?code=chdown">chdown</a>
-<a href="/?code=menu">menu</a>
-<a href="/?code=apps">apps</a>
-<a href="/?code=up">up</a>
-<a href="/?code=down">down</a>
-<a href="/?code=left">left</a>
-<a href="/?code=right">right</a>
-<a href="/?code=center">center</a>
-<a href="/?code=enter">enter</a>
-<a href="/?code=playpause">playpause</a>
-<a href="/?code=stop">stop</a>
-<a href="/?code=next">next</a>
-<a href="/?code=prev">prev</a>
-<a href="/?code=rewind">rewind</a>
-<a href="/?code=ff">ff</a>
-<a href="/?code=onoff">onoff</a>
-<a href="/?code=back">back</a>
-<a href="/?code=home">home</a>
+
+<a href="#" onclick="handleButton('24'); return false;">Volume UP</a>
+<a href="#" onclick="handleButton('25'); return false;">Volume Down</a>
+<a href="#" onclick="handleButton('164'); return false;">Mute</a>
+<a href="#" onclick="handleButton('166'); return false;">Channel Up</a>
+<a href="#" onclick="handleButton('167'); return false;">Channel Down</a>
+<a href="#" onclick="handleButton('82'); return false;">Menu</a>
+<a href="#" onclick="handleButton('187'); return false;">Apps</a>
+<a href="#" onclick="handleButton('19'); return false;">Up</a>
+<a href="#" onclick="handleButton('20'); return false;">Down</a>
+<a href="#" onclick="handleButton('21'); return false;">Left</a>
+<a href="#" onclick="handleButton('22'); return false;">Right</a>
+<a href="#" onclick="handleButton('23'); return false;">Center</a>
+<a href="#" onclick="handleButton('66'); return false;">Enter</a>
+<a href="#" onclick="handleButton('85'); return false;">Play / Pause</a>
+<a href="#" onclick="handleButton('86'); return false;">Stop</a>
+<a href="#" onclick="handleButton('87'); return false;">Next</a>
+<a href="#" onclick="handleButton('88'); return false;">Previous</a>
+<a href="#" onclick="handleButton('89'); return false;">Rewind</a>
+<a href="#" onclick="handleButton('90'); return false;">Fast forward</a>
+<a href="#" onclick="handleButton('26'); return false;">On / Off</a>
+<a href="#" onclick="handleButton('4'); return false;">Back</a>
+<a href="#" onclick="handleButton('3'); return false;">Home</a>
+
+<script src="/app.js"></script>
 </body>
 </html>
