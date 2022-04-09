@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">WebRemote</string>
+    <string name="title_activity_main">Leanback MainActivity</string>
+    <string name="browse_title">.</string>
+</resources>
