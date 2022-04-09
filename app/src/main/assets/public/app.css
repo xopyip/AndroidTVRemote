@@ -10,3 +10,75 @@ a{
     color: #ffffff;
     display: block;
 }
+a i{
+    font-size: 25px;
+}
+.top_nav{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.buttons_grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.buttons_grid{
+    text-align: center;
+}
+.main_nav{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.dpad{
+    display: grid;
+    grid-template-areas: "top top top" "left center right" "bottom bottom bottom";
+}
+.dpad > a:nth-child(1) {
+    grid-area: top;
+}
+.dpad > a:nth-child(2) {
+    grid-area: left;
+}
+.dpad > a:nth-child(3) {
+    grid-area: center;
+}
+.dpad > a:nth-child(4) {
+    grid-area: right;
+}
+.dpad > a:nth-child(5) {
+    grid-area: bottom;
+}
+.dpad a{
+    text-align: center;
+}
+
+a{
+    padding: 10px;
+    margin: 10px;
+    position: relative;
+}
+a::before{
+   content: " ";
+   display: block;
+   position: absolute;
+   width: 45px;
+   height: 45px;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   background: rgba(255, 255, 255, 0.1);
+   border-radius: 50%;
+}
+
+.vertical-slider{
+    width: 60px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    justify-content: space-between;
+    color: white;
+    align-items: center;
+}

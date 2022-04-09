@@ -6,32 +6,53 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="/app.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0071ccbc55.js" crossorigin="anonymous"></script>
     <title>WebRemote</title>
 </head>
 <body>
+<div class="top_nav">
+    <a href="#" onclick="handleButton('164'); return false;"><i class="fa-solid fa-volume-xmark"></i></a>
+    <a href="#" onclick="handleButton('26'); return false;"><i class="fa-solid fa-power-off"></i></a>
+    <a href="#" onclick=" return false;"><i class="fa-solid fa-magnifying-glass"></i></a>
+</div>
+<div class="main_nav">
+    <div class="vertical-slider">
+        <a href="#" onclick="handleButton('24'); return false;"><i class="fa-solid fa-volume-high"></i></a>
+        <span>Vol</span>
+        <a href="#" onclick="handleButton('25'); return false;"><i class="fa-solid fa-volume-low"></i></a>
+    </div>
 
-<a href="#" onclick="handleButton('24'); return false;">Volume UP</a>
-<a href="#" onclick="handleButton('25'); return false;">Volume Down</a>
-<a href="#" onclick="handleButton('164'); return false;">Mute</a>
-<a href="#" onclick="handleButton('166'); return false;">Channel Up</a>
-<a href="#" onclick="handleButton('167'); return false;">Channel Down</a>
-<a href="#" onclick="handleButton('82'); return false;">Menu</a>
-<a href="#" onclick="handleButton('187'); return false;">Apps</a>
-<a href="#" onclick="handleButton('19'); return false;">Up</a>
-<a href="#" onclick="handleButton('20'); return false;">Down</a>
-<a href="#" onclick="handleButton('21'); return false;">Left</a>
-<a href="#" onclick="handleButton('22'); return false;">Right</a>
-<a href="#" onclick="handleButton('23'); return false;">Center</a>
-<a href="#" onclick="handleButton('66'); return false;">Enter</a>
-<a href="#" onclick="handleButton('85'); return false;">Play / Pause</a>
-<a href="#" onclick="handleButton('86'); return false;">Stop</a>
-<a href="#" onclick="handleButton('87'); return false;">Next</a>
-<a href="#" onclick="handleButton('88'); return false;">Previous</a>
-<a href="#" onclick="handleButton('89'); return false;">Rewind</a>
-<a href="#" onclick="handleButton('90'); return false;">Fast forward</a>
-<a href="#" onclick="handleButton('26'); return false;">On / Off</a>
-<a href="#" onclick="handleButton('4'); return false;">Back</a>
-<a href="#" onclick="handleButton('3'); return false;">Home</a>
+    <div class="dpad">
+        <a href="#" onclick="handleButton('19'); return false;"><i class="fas fa-caret-up"></i></a>
+        <a href="#" onclick="handleButton('21'); return false;"><i class="fas fa-caret-left"></i></a>
+        <a href="#" onclick="handleButton('23'); return false;"><i class="fas fa-circle"></i></a>
+        <a href="#" onclick="handleButton('22'); return false;"><i class="fas fa-caret-right"></i></a>
+        <a href="#" onclick="handleButton('20'); return false;"><i class="fas fa-caret-down"></i></a>
+    </div>
+
+    <div class="vertical-slider">
+        <a href="#" onclick="handleButton('166'); return false;"><i class="fa-solid fa-angle-up"></i></a>
+        <span>Ch</span>
+        <a href="#" onclick="handleButton('167'); return false;"><i class="fa-solid fa-angle-down"></i></a>
+    </div>
+</div>
+<div class="buttons_grid">
+    <a href="#" onclick="handleButton('4'); return false;"><i class="fa-solid fa-caret-left"></i></a>
+    <a href="#" onclick="handleButton('3'); return false;"><i class="fa-solid fa-house"></i></a>
+    <a href="#" onclick="handleButton('82'); return false;"><i class="fa-solid fa-bars"></i></a>
+
+    <a href="#" onclick="handleButton('187'); return false;"><i class="fas fa-th-large"></i></a>
+    <div></div>
+    <div></div>
+
+    <a href="#" onclick="handleButton('88'); return false;"><i class="fas fa-chevron-left"></i></a>
+    <a href="#" onclick="handleButton('85'); return false;"><i class="fas fa-pause"></i></a>
+    <a href="#" onclick="handleButton('87'); return false;"><i class="fas fa-chevron-right"></i></a>
+
+    <a href="#" onclick="handleButton('89'); return false;"><i class="fa-solid fa-backward"></i></a>
+    <a href="#" onclick="handleButton('86'); return false;"><i class="fa-solid fa-stop"></i></a>
+    <a href="#" onclick="handleButton('90'); return false;"><i class="fa-solid fa-forward"></i></a>
+</div>
 
 <script src="/app.js"></script>
 </body>
