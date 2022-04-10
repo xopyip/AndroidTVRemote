@@ -83,6 +83,9 @@ class MainActivity : FragmentActivity() {
                             it.startsWith("click,") -> sock.exec(
                                 "input keyevent " + it.substring(6).toInt(), localId++
                             )
+                            it.startsWith("text,") -> sock.exec(
+                                "input text \"" + it.substring(5) + "\"", localId++
+                            )
                             else -> Log.i("WebRemote", "unknown command")
                         }
                     }

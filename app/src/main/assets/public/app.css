@@ -82,3 +82,56 @@ a::before{
     color: white;
     align-items: center;
 }
+
+#search{
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: block;
+    background: rgba(0,0,0,0.5);
+    z-index:2;
+    opacity: 0;
+    transition: opacity 0.2s linear;
+    pointer-events: none;
+}
+#search.active{
+    opacity: 1;
+    pointer-events: all;
+}
+#search_modal{
+    z-index:3;
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    height: 50px;
+    background: #373541;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    display: flex;
+    bottom: -50px;
+    transition: bottom 0.2s linear;
+}
+#search.active > #search_modal{
+    bottom: 20px;
+}
+
+#search_modal > input{
+    flex-grow: 1;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid white;
+    color: white;
+    outline: none;
+    border-radius:0;
+}
+
+#search_modal > button[type=submit]{
+    background: transparent;
+    border: 0;
+    color: white;
+    font-size: 25px;
+}

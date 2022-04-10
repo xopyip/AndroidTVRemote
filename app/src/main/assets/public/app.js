@@ -21,3 +21,18 @@ function handleButton(str){
     }
     ws.send("click," + str);
 }
+
+function openSearchModal(){
+    document.querySelector("#search").classList.add("active");
+}
+
+function hideSearchModal(){
+    document.querySelector("#search").classList.remove("active");
+}
+
+function search(e){
+    const text = document.querySelector("#search_modal>input").value;
+    ws.send("text," + text);
+    hideSearchModal();
+    return false;
+}

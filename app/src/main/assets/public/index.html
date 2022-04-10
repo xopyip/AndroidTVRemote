@@ -10,10 +10,18 @@
     <title>WebRemote</title>
 </head>
 <body>
+<div id="search" onclick="hideSearchModal()">
+    <form id="search_modal" action="#" method="get" onsubmit="search()" onclick="event.stopPropagation()">
+        <input type="text" placeholder="Search..."/>
+        <button type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+    </form>
+</div>
 <div class="top_nav">
     <a href="#" onclick="handleButton('164'); return false;"><i class="fa-solid fa-volume-xmark"></i></a>
     <a href="#" onclick="handleButton('26'); return false;"><i class="fa-solid fa-power-off"></i></a>
-    <a href="#" onclick=" return false;"><i class="fa-solid fa-magnifying-glass"></i></a>
+    <a href="#" onclick="openSearchModal(); return false;"><i class="fa-solid fa-magnifying-glass"></i></a>
 </div>
 <div class="main_nav">
     <div class="vertical-slider">
